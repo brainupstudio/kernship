@@ -1,0 +1,39 @@
+# Tries scripts/install.sh on a clean Mac against the latest published release: when the
+# script changes, after every release, and by hand (Actions > Install script).
+name: Install script
+
+on:
+  push:
+    branches: [main]
+    paths: ["scripts/install.sh", ".github/workflows/install-scripts.yml"]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  macos:
+    strategy:
+      matrix:
+        # Apple Silicon and Intel runners: each must get its own build
+        os: [macos-latest, macos-13]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: The script is plain ASCII and passes shellcheck
+        run: |
+          if LC_ALL=C grep -n '[^ -~]' scripts/install.sh; then echo "non-ASCII characters"; exit 1; fi
+          brew install shellcheck >/dev/null 2>&1 || true
+          shellcheck -s sh scripts/install.sh
+      - name: Install into a test folder
+        run: KERNSHIP_DIR="$RUNNER_TEMP/apps" sh scripts/install.sh
+      - name: The app is there, for this Mac, unmarked and intact
+        run: |
+          app="$RUNNER_TEMP/apps/Kernship.app"
+          test -x "$app/Contents/MacOS/Kernship"
+          if xattr "$app" | grep -q com.apple.quarantine; then echo "quarantined"; exit 1; fi
+          codesign --verify --strict "$app"
+          want=$(uname -m)
+          have=$(lipo -archs "$app/Contents/MacOS/Kernship")
+          echo "machine $want, app $have"
+          case " $have " in *" $want "*) ;; *) echo "wrong architecture"; exit 1 ;; esac
+          defaults read "$app/Contents/Info.plist" CFBundleShortVersionString
