@@ -1,0 +1,833 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-20T09:20:51Z",
+  "title": "Design System: Kernship",
+  "extensions": {
+    "colorMeta": {
+      "dark-ground": {
+        "role": "neutral",
+        "displayName": "Ground (dark)",
+        "canonical": "#101010",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "dark-panel": {
+        "role": "neutral",
+        "displayName": "Panel (dark)",
+        "canonical": "#1C1C1B",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252524",
+          "#424241",
+          "#616160",
+          "#828281",
+          "#A5A5A4",
+          "#C9C9C8",
+          "#EEEEED"
+        ]
+      },
+      "dark-panel-hi": {
+        "role": "neutral",
+        "displayName": "Panel High (dark)",
+        "canonical": "#282826",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252524",
+          "#424240",
+          "#61615F",
+          "#828280",
+          "#A5A5A3",
+          "#C9C9C7",
+          "#EEEEED"
+        ]
+      },
+      "dark-sel-fill": {
+        "role": "neutral",
+        "displayName": "Selection Grey (dark)",
+        "canonical": "#3A3A36",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252523",
+          "#42423F",
+          "#61615D",
+          "#83837E",
+          "#A5A5A1",
+          "#C9C9C5",
+          "#EFEFEB"
+        ]
+      },
+      "dark-field": {
+        "role": "neutral",
+        "displayName": "Field (dark)",
+        "canonical": "#161615",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252524",
+          "#424241",
+          "#616160",
+          "#828281",
+          "#A5A5A4",
+          "#C9C9C8",
+          "#EEEEED"
+        ]
+      },
+      "dark-menu": {
+        "role": "neutral",
+        "displayName": "Menu (dark)",
+        "canonical": "#20201F",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252524",
+          "#424241",
+          "#616160",
+          "#828281",
+          "#A5A5A4",
+          "#C9C9C8",
+          "#EEEEED"
+        ]
+      },
+      "dark-rail": {
+        "role": "primary",
+        "displayName": "Rail (dark)",
+        "canonical": "#191918",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252524",
+          "#424241",
+          "#616160",
+          "#828281",
+          "#A5A5A4",
+          "#C9C9C8",
+          "#EEEEED"
+        ]
+      },
+      "dark-rail-ink": {
+        "role": "neutral",
+        "displayName": "Rail Ink (dark)",
+        "canonical": "#F2F1EC",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#262523",
+          "#43423F",
+          "#62615D",
+          "#83827E",
+          "#A6A5A1",
+          "#CAC9C5",
+          "#EFEEEB"
+        ]
+      },
+      "dark-rail-dim": {
+        "role": "neutral",
+        "displayName": "Rail Dim (dark)",
+        "canonical": "#A6A59E",
+        "tonalRamp": [
+          "#0B0B09",
+          "#262521",
+          "#43423D",
+          "#62615B",
+          "#83837C",
+          "#A6A59F",
+          "#CAC9C3",
+          "#EFEFEA"
+        ]
+      },
+      "dark-rail-hover": {
+        "role": "neutral",
+        "displayName": "Rail Hover (dark)",
+        "canonical": "#282826",
+        "tonalRamp": [
+          "#0C0B07",
+          "#27251E",
+          "#444237",
+          "#646255",
+          "#858375",
+          "#A8A697",
+          "#CCCABD",
+          "#F0EFE5"
+        ]
+      },
+      "dark-band": {
+        "role": "primary",
+        "displayName": "Current-Source Band (dark)",
+        "canonical": "#FFD200",
+        "tonalRamp": [
+          "#100A00",
+          "#2E2400",
+          "#504004",
+          "#745F06",
+          "#9B8013",
+          "#C5A203",
+          "#EBC641",
+          "#FFEEB8"
+        ]
+      },
+      "dark-band-ink": {
+        "role": "primary",
+        "displayName": "Band Ink (dark)",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Ink (dark)",
+        "canonical": "#F2F1EC",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#262523",
+          "#43423F",
+          "#62615D",
+          "#83827E",
+          "#A6A5A1",
+          "#CAC9C5",
+          "#EFEEEB"
+        ]
+      },
+      "dark-dim": {
+        "role": "neutral",
+        "displayName": "Dim (dark)",
+        "canonical": "#A6A59E",
+        "tonalRamp": [
+          "#0B0B09",
+          "#262521",
+          "#43423D",
+          "#62615B",
+          "#83837C",
+          "#A6A59F",
+          "#CAC9C3",
+          "#EFEFEA"
+        ]
+      },
+      "dark-faint": {
+        "role": "neutral",
+        "displayName": "Faint (dark)",
+        "canonical": "#8C8B84",
+        "tonalRamp": [
+          "#0B0B09",
+          "#262521",
+          "#43423D",
+          "#62615B",
+          "#84837C",
+          "#A6A59E",
+          "#CAC9C3",
+          "#EFEFEA"
+        ]
+      },
+      "dark-rule": {
+        "role": "neutral",
+        "displayName": "Rule (dark)",
+        "canonical": "#34342F",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252522",
+          "#42423E",
+          "#62625C",
+          "#83837D",
+          "#A5A5A0",
+          "#C9C9C4",
+          "#EFEFEB"
+        ]
+      },
+      "dark-rule-strong": {
+        "role": "neutral",
+        "displayName": "Rule Strong (dark)",
+        "canonical": "#5C5C55",
+        "tonalRamp": [
+          "#0B0B09",
+          "#252521",
+          "#42423D",
+          "#62625B",
+          "#83837B",
+          "#A6A69E",
+          "#CACAC3",
+          "#EFEFEA"
+        ]
+      },
+      "dark-danger": {
+        "role": "tertiary",
+        "displayName": "Danger (dark)",
+        "canonical": "#FF7A6B",
+        "tonalRamp": [
+          "#200000",
+          "#4E0001",
+          "#7C110E",
+          "#A92F27",
+          "#D35246",
+          "#F8796B",
+          "#FDB4A9",
+          "#FFE9E5"
+        ]
+      },
+      "light-ground": {
+        "role": "neutral",
+        "displayName": "Ground (light)",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "light-panel": {
+        "role": "neutral",
+        "displayName": "Panel (light)",
+        "canonical": "#F3F3F0",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252524",
+          "#424240",
+          "#61615F",
+          "#828280",
+          "#A5A5A2",
+          "#C9C9C7",
+          "#EEEEED"
+        ]
+      },
+      "light-panel-hi": {
+        "role": "neutral",
+        "displayName": "Panel High (light)",
+        "canonical": "#E8E8E4",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252523",
+          "#42423F",
+          "#61615E",
+          "#82827F",
+          "#A5A5A2",
+          "#C9C9C6",
+          "#EFEFEC"
+        ]
+      },
+      "light-sel-fill": {
+        "role": "neutral",
+        "displayName": "Selection Grey (light)",
+        "canonical": "#D6D6D0",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252522",
+          "#42423E",
+          "#62625C",
+          "#83837D",
+          "#A5A5A0",
+          "#C9C9C4",
+          "#EFEFEB"
+        ]
+      },
+      "light-field": {
+        "role": "neutral",
+        "displayName": "Field (light)",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "light-menu": {
+        "role": "neutral",
+        "displayName": "Menu (light)",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "light-rail": {
+        "role": "primary",
+        "displayName": "Rail (light)",
+        "canonical": "#FFD200",
+        "tonalRamp": [
+          "#100A00",
+          "#2E2400",
+          "#504004",
+          "#745F06",
+          "#9B8013",
+          "#C5A203",
+          "#EBC641",
+          "#FFEEB8"
+        ]
+      },
+      "light-rail-ink": {
+        "role": "primary",
+        "displayName": "Rail Ink (light)",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "light-rail-dim": {
+        "role": "primary",
+        "displayName": "Rail Dim (light)",
+        "canonical": "#3D3300",
+        "tonalRamp": [
+          "#0E0B01",
+          "#2B2509",
+          "#4A421C",
+          "#6B6135",
+          "#8D8354",
+          "#B0A678",
+          "#D3CAA1",
+          "#F6EFCF"
+        ]
+      },
+      "light-rail-hover": {
+        "role": "primary",
+        "displayName": "Rail Hover (light)",
+        "canonical": "#F0C200",
+        "tonalRamp": [
+          "#110A00",
+          "#2F2400",
+          "#514005",
+          "#765E07",
+          "#9C7F14",
+          "#C7A006",
+          "#EBC54D",
+          "#FEEEBD"
+        ]
+      },
+      "light-band": {
+        "role": "primary",
+        "displayName": "Current-Source Band (light)",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "light-band-ink": {
+        "role": "primary",
+        "displayName": "Band Ink (light)",
+        "canonical": "#FFD200",
+        "tonalRamp": [
+          "#100A00",
+          "#2E2400",
+          "#504004",
+          "#745F06",
+          "#9B8013",
+          "#C5A203",
+          "#EBC641",
+          "#FFEEB8"
+        ]
+      },
+      "light-ink": {
+        "role": "neutral",
+        "displayName": "Ink (light)",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "light-dim": {
+        "role": "neutral",
+        "displayName": "Dim (light)",
+        "canonical": "#55554F",
+        "tonalRamp": [
+          "#0B0B09",
+          "#252522",
+          "#42423D",
+          "#62625C",
+          "#83837C",
+          "#A5A59F",
+          "#C9C9C4",
+          "#EFEFEA"
+        ]
+      },
+      "light-faint": {
+        "role": "neutral",
+        "displayName": "Faint (light)",
+        "canonical": "#6C6C65",
+        "tonalRamp": [
+          "#0B0B09",
+          "#252521",
+          "#42423D",
+          "#62625B",
+          "#83837C",
+          "#A5A69E",
+          "#CACAC3",
+          "#EFEFEA"
+        ]
+      },
+      "light-rule": {
+        "role": "neutral",
+        "displayName": "Rule (light)",
+        "canonical": "#D8D8D3",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252523",
+          "#42423F",
+          "#61615D",
+          "#83837E",
+          "#A5A5A1",
+          "#C9C9C5",
+          "#EFEFEB"
+        ]
+      },
+      "light-rule-strong": {
+        "role": "neutral",
+        "displayName": "Rule Strong (light)",
+        "canonical": "#96968F",
+        "tonalRamp": [
+          "#0B0B09",
+          "#252522",
+          "#42423D",
+          "#62625B",
+          "#83837C",
+          "#A5A59F",
+          "#C9CAC3",
+          "#EFEFEA"
+        ]
+      },
+      "light-danger": {
+        "role": "tertiary",
+        "displayName": "Danger (light)",
+        "canonical": "#BE281C",
+        "tonalRamp": [
+          "#210000",
+          "#4D0100",
+          "#800401",
+          "#B12016",
+          "#DC4738",
+          "#FE7563",
+          "#FEB4A7",
+          "#FFE9E5"
+        ]
+      },
+      "dark-rail-icon": {
+        "role": "primary",
+        "displayName": "Rail Icon (dark)",
+        "canonical": "#FFD200",
+        "tonalRamp": [
+          "#100A00",
+          "#2E2400",
+          "#504004",
+          "#745F06",
+          "#9B8013",
+          "#C5A203",
+          "#EBC641",
+          "#FFEEB8"
+        ]
+      },
+      "light-rail-icon": {
+        "role": "primary",
+        "displayName": "Rail Icon (light)",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Title of an empty view."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Family name at the head of the Info pane."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Family names above cards, settings headings."
+      },
+      "field": {
+        "displayName": "Field",
+        "purpose": "Typed text in the search and preview-text fields."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Menus, list cells, notes."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "The Off status word and minor annotations."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Plain buttons, sign band parts, toasts, chips."
+      },
+      "rail-row": {
+        "displayName": "Rail Row",
+        "purpose": "Source names on the rail."
+      },
+      "count": {
+        "displayName": "Count",
+        "purpose": "Numbers on the rail and the sign band."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Lettering of a primary button."
+      },
+      "group-label": {
+        "displayName": "Group Label",
+        "purpose": "Group names on the rail and in the Convert pane."
+      },
+      "status-word": {
+        "displayName": "Status Word",
+        "purpose": "The word beside a status mark that is on."
+      }
+    },
+    "shadows": [
+      {
+        "name": "menu-dark",
+        "value": "0 6px 18px rgba(0,0,0,0.43)",
+        "purpose": "Context menus and dropdowns, dark appearance."
+      },
+      {
+        "name": "menu-light",
+        "value": "0 6px 18px rgba(0,0,0,0.16)",
+        "purpose": "Context menus and dropdowns, light appearance."
+      },
+      {
+        "name": "window-dark",
+        "value": "0 10px 30px rgba(0,0,0,0.47)",
+        "purpose": "Dialogs and the settings window, dark appearance."
+      },
+      {
+        "name": "window-light",
+        "value": "0 10px 30px rgba(0,0,0,0.18)",
+        "purpose": "Dialogs and the settings window, light appearance."
+      },
+      {
+        "name": "popover",
+        "value": "0 8px 24px rgba(0,0,0,0.35)",
+        "purpose": "The search filter panel."
+      },
+      {
+        "name": "preview-bar",
+        "value": "0 8px 18px rgba(0,0,0,0.24)",
+        "purpose": "The floating preview-text bar."
+      }
+    ],
+    "motion": [
+      {
+        "name": "anim",
+        "value": "200ms",
+        "purpose": "Every hover, selection, toggle, band slide and appearance change (theme.rs ANIM = 0.2)."
+      },
+      {
+        "name": "toast",
+        "value": "200ms fade with an 8px rise",
+        "purpose": "Toasts entering and leaving."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sign-band-min",
+        "value": "150px",
+        "purpose": "Below this width the sign band is not drawn."
+      },
+      {
+        "name": "rail-tally-min-height",
+        "value": "420px",
+        "purpose": "Below this rail height the activation tally is not drawn."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Rail",
+      "kind": "nav",
+      "refersTo": "rail-row",
+      "description": "The sign: source rows with pictograms on squares, bold counts, and the inverted band on the current source.",
+      "html": "<nav class='ds-rail'><a class='ds-rail-row' href='#'><span class='ds-rail-sq'><svg width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='currentColor' stroke-width='1.4'><rect x='1.2' y='1.2' width='8.5' height='8.5' rx='2'/><rect x='4.4' y='4.4' width='8.5' height='8.5' rx='2' fill='var(--sq)'/></svg></span><span class='ds-rail-name'>All Fonts</span><b>684</b></a><a class='ds-rail-row ds-rail-current' href='#'><span class='ds-rail-sq'><svg width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='currentColor' stroke-width='1.4'><circle cx='7' cy='7' r='5.6'/><ellipse cx='7' cy='7' rx='2.4' ry='5.6'/><path d='M1.4 7h11.2'/></svg></span><span class='ds-rail-name'>Google Fonts</span><b>7,986</b></a><div class='ds-rail-group'>Libraries</div><a class='ds-rail-row' href='#'><span class='ds-rail-sq'><svg width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='currentColor' stroke-width='1.4'><rect x='1.2' y='1.2' width='8.5' height='8.5' rx='2'/><rect x='4.4' y='4.4' width='8.5' height='8.5' rx='2' fill='var(--sq)'/></svg></span><span class='ds-rail-name'>Font Library</span><b>0</b></a></nav>",
+      "css": ".ds-rail { width: 210px; background: #191918; border-right: 1px solid #34342F; padding: 8px 0; font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; } .ds-rail-row { display: flex; align-items: center; height: 32px; padding: 0 12px 0 21px; color: #F2F1EC; text-decoration: none; font-size: 13.5px; font-weight: 500; transition: background 0.2s, color 0.2s; } .ds-rail-row:hover { background: #282826; } .ds-rail-row:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; border-radius: 3px; } .ds-rail-sq { --sq: #FFD200; width: 20px; height: 20px; border-radius: 4px; background: #FFD200; color: #191918; display: grid; place-items: center; margin-right: 9px; } .ds-rail-name { flex: 1; } .ds-rail-row b { font-size: 13px; font-weight: 700; opacity: .7; } .ds-rail-current, .ds-rail-current:hover { background: #FFD200; color: #111111; } .ds-rail-current .ds-rail-sq { --sq: #111111; background: #111111; color: #FFD200; } .ds-rail-group { padding: 16px 14px 6px; font-size: 12px; font-weight: 700; color: #A6A59E; }"
+    },
+    {
+      "name": "Sign Band",
+      "kind": "custom",
+      "refersTo": "sign-band",
+      "description": "Toolbar direction sign: place, arrow, selection, then the count.",
+      "html": "<div class='ds-sign'><span>Google Fonts</span><svg width='14' height='10' viewBox='0 0 14 10' fill='none' stroke='currentColor' stroke-width='1.4'><path d='M2 5h10M8.5 1.5 12 5 8.5 8.5'/></svg><span>Abhaya Libre</span><svg width='14' height='10' viewBox='0 0 14 10' fill='none' stroke='currentColor' stroke-width='1.4'><path d='M2 5h10M8.5 1.5 12 5 8.5 8.5'/></svg><b>SemiBold</b><i></i><b>7,986 styles</b></div>",
+      "css": ".ds-sign { display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px; border-radius: 5px; background: #F2F1EC; color: #101010; font-size: 13px; font-weight: 500; font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; } .ds-sign b { font-weight: 700; } .ds-sign i { flex: 1; align-self: stretch; margin: 7px 2px; border-right: 1px solid rgba(16,16,16,0.4); }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action a pane or dialog exists for: ink fill, ground lettering.",
+      "html": "<button class='ds-btn-primary'>Convert 1 font</button>",
+      "css": ".ds-btn-primary { min-width: 72px; height: 28px; padding: 0 14px; border: none; border-radius: 5px; background: #F2F1EC; color: #101010; font-size: 13.5px; font-weight: 700; font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; transition: background 0.2s; } .ds-btn-primary:hover { background: #D7D6D1; } .ds-btn-primary:focus-visible { outline: 2px solid #F2F1EC; outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.4; }"
+    },
+    {
+      "name": "Plain Button",
+      "kind": "button",
+      "refersTo": "button-plain",
+      "description": "Every other action: an ink frame on ground.",
+      "html": "<button class='ds-btn-plain'>Copy @font-face CSS</button>",
+      "css": ".ds-btn-plain { min-width: 72px; height: 28px; padding: 0 14px; border: 1px solid #F2F1EC; border-radius: 5px; background: #101010; color: #F2F1EC; font-size: 13px; font-weight: 500; font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; transition: background 0.2s; } .ds-btn-plain:hover { background: #282826; } .ds-btn-plain:focus-visible { outline: 2px solid #F2F1EC; outline-offset: 2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Deletes something: danger frame and lettering, never a fill.",
+      "html": "<button class='ds-btn-danger'>Delete</button>",
+      "css": ".ds-btn-danger { min-width: 72px; height: 28px; padding: 0 14px; border: 1px solid #FF7A6B; border-radius: 5px; background: #101010; color: #FF7A6B; font-size: 13px; font-weight: 500; font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; transition: background 0.2s; } .ds-btn-danger:hover { background: #282826; } .ds-btn-danger:focus-visible { outline: 2px solid #F2F1EC; outline-offset: 2px; }"
+    },
+    {
+      "name": "Toggle Tabs",
+      "kind": "chip",
+      "refersTo": "toggle",
+      "description": "Words that switch something on (tabs, alignment): ink fill when on.",
+      "html": "<div class='ds-tabs'><button class='ds-toggle ds-toggle-on'>Preview</button><button class='ds-toggle'>Sizes</button><button class='ds-toggle'>Glyphs</button><button class='ds-toggle'>Info</button></div>",
+      "css": ".ds-tabs { display: flex; background: #1C1C1B; padding: 8px; } .ds-toggle { height: 24px; padding: 0 6px; border: none; border-radius: 5px; background: transparent; color: #F2F1EC; font-size: 12.5px; font-weight: 500; font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; transition: background 0.2s, color 0.2s; } .ds-toggle:hover { background: #282826; } .ds-toggle-on, .ds-toggle-on:hover { background: #F2F1EC; color: #101010; } .ds-toggle:focus-visible { outline: 2px solid #F2F1EC; outline-offset: 2px; }"
+    },
+    {
+      "name": "Font Card",
+      "kind": "card",
+      "refersTo": "font-card",
+      "description": "One font in the grid: status mark and word, name, specimen. Selected is a 2.5 pt ink frame on ground.",
+      "html": "<div class='ds-cards'><div class='ds-card' tabindex='0'><div class='ds-card-head'><span class='ds-card-mark'><svg width='12' height='12' viewBox='0 0 12 12'><circle cx='6' cy='6' r='5' fill='currentColor'/></svg></span><span class='ds-card-name'>Abhaya Libre Regular</span><b>Active</b></div><div class='ds-card-specimen'>Abhaya Libre</div></div><div class='ds-card ds-card-selected' tabindex='0'><div class='ds-card-head'><span class='ds-card-mark ds-card-off'><svg width='12' height='12' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.1' fill='none' stroke='currentColor' stroke-width='1.8'/></svg></span><span class='ds-card-name'>Abhaya Libre SemiBold</span><span class='ds-card-word'>Off</span></div><div class='ds-card-specimen'>Abhaya Libre</div></div></div>",
+      "css": ".ds-cards { display: flex; gap: 12px; background: #101010; padding: 12px; } .ds-card { width: 200px; height: 96px; border-radius: 6px; background: #1C1C1B; color: #F2F1EC; padding: 9px 14px; font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; transition: background 0.2s, box-shadow 0.2s; } .ds-card:hover { background: #282826; } .ds-card:focus-visible { outline: 2px solid #F2F1EC; outline-offset: 2px; } .ds-card-selected, .ds-card-selected:hover { background: #101010; box-shadow: inset 0 0 0 2.5px #F2F1EC; } .ds-card-head { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 500; } .ds-card-mark { display: grid; } .ds-card-off { color: #A6A59E; } .ds-card-name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .ds-card-head b { font-size: 11.5px; font-weight: 700; } .ds-card-word { font-size: 11.5px; font-weight: 400; color: #A6A59E; } .ds-card-specimen { margin-top: 12px; font-family: Georgia, serif; font-size: 24px; }"
+    },
+    {
+      "name": "Status Marks",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "State by shape plus word: Active, Temporary, Auto, Off, Downloading.",
+      "html": "<ul class='ds-marks'><li><svg width='12' height='12' viewBox='0 0 12 12'><circle cx='6' cy='6' r='5' fill='currentColor'/></svg><span>Active</span></li><li><svg width='12' height='12' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.1' fill='none' stroke='currentColor' stroke-width='1.8'/><path d='M6 1a5 5 0 0 0 0 10z' fill='currentColor'/></svg><span>Temporary</span></li><li><svg width='12' height='12' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.1' fill='none' stroke='currentColor' stroke-width='1.8'/><circle cx='6' cy='6' r='2' fill='currentColor'/></svg><span>Auto</span></li><li class=\"ds-marks-off\"><svg width='12' height='12' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.1' fill='none' stroke='currentColor' stroke-width='1.8'/></svg><span>Off</span></li><li><svg width='12' height='12' viewBox='0 0 12 12'><path d='M6 1.9a4.1 4.1 0 1 1-4.03 3.3' fill='none' stroke='currentColor' stroke-width='1.8'/></svg><span>Downloading</span></li></ul>",
+      "css": ".ds-marks { list-style: none; margin: 0; padding: 12px; display: flex; gap: 18px; background: #101010; color: #F2F1EC; font-size: 12.5px; font-weight: 500; font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; } .ds-marks li { display: flex; align-items: center; gap: 7px; } .ds-marks-off { color: #A6A59E; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Field fill with a rule-strong frame; the frame thickens and turns ink on focus.",
+      "html": "<label class='ds-search'><svg width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='currentColor' stroke-width='1.4'><circle cx='6' cy='6' r='4.6'/><path d='M9.4 9.4l3.2 3.2'/></svg><input placeholder='Search'></label>",
+      "css": ".ds-search { display: flex; align-items: center; gap: 9px; width: 260px; height: 32px; padding: 0 10px; border-radius: 5px; background: #161615; color: #A6A59E; box-shadow: inset 0 0 0 1px #5C5C55; transition: box-shadow 0.2s; } .ds-search:focus-within { box-shadow: inset 0 0 0 2px #F2F1EC; } .ds-search input { flex: 1; border: none; outline: none; background: transparent; color: #F2F1EC; font-size: 14px; font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; } .ds-search input::placeholder { color: #A6A59E; }"
+    },
+    {
+      "name": "Menu",
+      "kind": "custom",
+      "refersTo": "menu",
+      "description": "Context menu: 24 pt rows, status marks as icons, an ink band under the pointer.",
+      "html": "<div class='ds-menu'><button class='ds-menu-row'><svg width='12' height='12' viewBox='0 0 12 12'><circle cx='6' cy='6' r='5' fill='currentColor'/></svg><span>Activate</span><kbd>⌘A</kbd></button><button class='ds-menu-row'><svg width='12' height='12' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.1' fill='none' stroke='currentColor' stroke-width='1.8'/><path d='M6 1a5 5 0 0 0 0 10z' fill='currentColor'/></svg><span>Activate Temporarily</span></button><button class='ds-menu-row'><svg width='12' height='12' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.1' fill='none' stroke='currentColor' stroke-width='1.8'/></svg><span>Deactivate</span></button><hr><button class='ds-menu-row'><svg width='12' height='12' viewBox='0 0 14 14' fill='none' stroke='currentColor' stroke-width='1.25'><path d='M1 7h11.5M8.5 3l4 4-4 4'/></svg><span>Show in Finder</span></button></div>",
+      "css": ".ds-menu { width: 236px; padding: 5px; border-radius: 8px; background: #20201F; border: 1px solid #5C5C55; box-shadow: 0 6px 18px rgba(0,0,0,0.43); font-family: 'Familjen Grotesk', -apple-system, 'Helvetica Neue', sans-serif; } .ds-menu-row { display: flex; align-items: center; gap: 9px; width: 100%; height: 24px; padding: 0 12px; border: none; border-radius: 6px; background: transparent; color: #F2F1EC; font-size: 13px; text-align: left; transition: background 0.2s, color 0.2s; } .ds-menu-row span { flex: 1; } .ds-menu-row kbd { font: inherit; color: #A6A59E; } .ds-menu-row:hover, .ds-menu-row:focus-visible { background: #F2F1EC; color: #101010; outline: none; } .ds-menu-row:hover kbd { color: #101010; } .ds-menu hr { border: none; border-top: 1px solid #34342F; margin: 5px 10px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Yellow Wayfinding",
+    "overview": "Kernship borrows the grammar of airport sign systems: navigation is signage. One rail at the left edge tells you where you are, and its yellow is spent on nothing else. Everything to the right of the rail is ink on ground: flat grey panels, ink frames, and an ink fill for whatever is switched on. The fonts are the content, so the interface carries no second accent and no decoration that could compete with a specimen.\n\nThe system ships in two appearances that are one design inverted, not two themes. In light the rail is a saturated yellow sign with black lettering and the current source is a black band; in dark the rail is near-black with off-white lettering, yellow pictograms and status marks, and the current source is a full yellow band. The direction was chosen by the user from a dealt hand (catalog world `wayfinding-cartography-signage-terminal-yellow-wayfinding`) and evolved at their request with the dark appearance. The tokens below are read from the shipped source, `src/theme.rs`.\n\nState is never left to colour. A font's activation is a shape plus a word, a selected card is a heavy ink frame, and a control that is on is an ink fill with ground lettering. The system refuses the graphite window with a system-blue accent.",
+    "keyCharacteristics": [
+      "One yellow rail, 210 pt wide, running to the window edges; yellow appears nowhere else.",
+      "Ink on ground everywhere else: flat panels, 1 pt hairlines, ink frames, ink fills.",
+      "Status is a shape plus a word: filled disc, half disc, disc in ring, empty ring, open ring.",
+      "The current source is an inverted band that slides between rail rows.",
+      "A sign band in the toolbar reads like a direction sign: source, arrow, selection, count.",
+      "One typeface, Familjen Grotesk, in three weights; sizes sit between 11.5 and 18 pt.",
+      "Every state change fades over 200 ms; nothing bounces or scales."
+    ],
+    "rules": [
+      {
+        "name": "The Rail Only Rule",
+        "body": "Yellow belongs to the rail and to nothing else. A yellow button, badge, link or focus ring anywhere right of the rail is a defect.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Is On Rule",
+        "body": "What is on is an ink fill with ground lettering: the active toolbar button, the current view, the tab, the sample in use, a ticked checkbox, the menu row under the pointer, the primary button. Nothing that is off may take an ink fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Shape And Word Rule",
+        "body": "State is never carried by colour. A font's status is a mark and its word (Active filled disc, Temporary half disc, Auto disc in ring, Off empty ring, Downloading open ring), drawn in ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Alphabet Rule",
+        "body": "The interface is set in Familjen Grotesk only. Other faces appear solely as content: specimens, and the letter samples that stand for a font category.",
+        "section": "typography"
+      },
+      {
+        "name": "The Bold Counts Rule",
+        "body": "Numbers and live states are Bold; names are Medium; prose is Regular. No uppercase styling, no letter-spacing.",
+        "section": "typography"
+      },
+      {
+        "name": "The Float Only Rule",
+        "body": "A shadow means \"this is above the fonts and will go away or move\": menus, popovers, dialogs, the preview bar. Cards, panes, the rail and the toolbar never cast one.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep yellow on the rail: its ground in light, its pictograms, tally marks and current-source band in dark.",
+      "Do show what is on as an ink fill with ground lettering, in both appearances.",
+      "Do mark a selected card or icon cell with a 2.5 pt ink frame on Ground, and a selected list row with Selection Grey.",
+      "Do pair every status mark with its word (Active, Temporary, Auto, Off, Downloading) wherever there is room.",
+      "Do give each pane or dialog one primary ink-filled button, and frame every other action.",
+      "Do set the interface in Familjen Grotesk Regular, Medium and Bold, with numbers and live states in Bold.",
+      "Do fade every hover, selection and appearance change over 200 ms.",
+      "Do draw icons with 1.25 to 1.5 pt strokes in the colour of the lettering beside them.",
+      "Do show the keyboard focus ring (2 pt ground gap, 2 pt ink ring) for keyboard movement only.",
+      "Do define every new colour role twice, once in each appearance."
+    ],
+    "donts": [
+      "Don't use yellow for a button, link, badge, selection or focus ring outside the rail.",
+      "Don't introduce a second accent colour or a system-blue highlight.",
+      "Don't signal selection or state with hue alone.",
+      "Don't fill a surface with Danger; it is a frame and lettering only.",
+      "Don't give cards, panes, the rail or the toolbar a shadow or a border at rest.",
+      "Don't set interface lettering in a face other than Familjen Grotesk.",
+      "Don't let the interface compete with a specimen: no gradients, textures or decoration on the ground behind the fonts."
+    ]
+  }
+}
