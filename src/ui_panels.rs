@@ -578,7 +578,7 @@ pub fn dialogs(app: &mut KernshipApp, ctx: &egui::Context, now: f64) {
         }
         Dialog::Preferences { tab } => crate::ui_settings::window(app, ctx, tab, now),
         Dialog::Welcome => modal(ctx, "Welcome to Kernship", 420.0, |ui| {
-            // The "k." mark in the appearance's own version, then the name and the tagline.
+            // The mark in the appearance's own version, then the name and the tagline.
             let light = light_t() > 0.5;
             let key = egui::Id::new(("kernship-mark", light));
             let tex = ui.ctx().memory_mut(|m| m.data.get_temp::<egui::TextureHandle>(key));

@@ -3,16 +3,19 @@ use std::sync::Arc;
 
 pub const NAME: &str = "Kernship";
 pub const TAGLINE: &str = "A command centre for your font galaxy.";
-/// The "k." mark, white on black, 4096 px square: the Dock icon and, as a template image, the
-/// menu bar icon.
-pub const MARK_PNG: &[u8] = include_bytes!("../assets/brand/kernship-k-white-on-black-4096.png");
+/// The mark, white on black, 4096 px square (from assets/brand/kernship-mark-white-on-black.svg):
+/// the Dock icon and, as a template image, the menu bar icon.
+pub const MARK_PNG: &[u8] = include_bytes!("../assets/brand/kernship-mark-white-on-black-4096.png");
 /// Its black-on-white twin, for the Welcome window in the light appearance.
-pub const MARK_LIGHT_PNG: &[u8] = include_bytes!("../assets/brand/kernship-k-black-on-white-4096.png");
+pub const MARK_LIGHT_PNG: &[u8] = include_bytes!("../assets/brand/kernship-mark-black-on-white-4096.png");
 /// Menu bar icon height in pixels at 2×: 14 pt, the height of the other menu bar icons'
 /// artwork (the menu bar itself is taller; macOS centres the icon in it).
 const MENUBAR_PX: u32 = 28;
+/// How big the mark is in the Dock icon, against its own square (the Welcome window and the
+/// menu bar use it at full size).
+const DOCK_MARK_SCALE: f32 = 0.8;
 
-/// The menu bar icon as PNG: the K mark in `rgb` on transparent, 28 px tall (14 pt at 2×).
+/// The menu bar icon as PNG: the mark in `rgb` on transparent, 28 px tall (14 pt at 2×).
 /// Black is the version for the light menu bar, white the one for the dark menu bar; the app
 /// gives macOS the mark as a template image, which it draws in the right colour by itself.
 pub fn menubar_icon_png(rgb: [u8; 3]) -> Option<(Vec<u8>, u32, u32)> {
@@ -55,7 +58,7 @@ fn mark_image() -> Option<&'static image::RgbaImage> {
     MARK.get_or_init(|| image::load_from_memory_with_format(MARK_PNG, image::ImageFormat::Png).ok().map(|i| i.to_rgba8())).as_ref()
 }
 
-/// The Dock icon: the mark's own square (white "k." on black, as drawn) on the macOS icon
+/// The Dock icon: the mark's own square (white on black, as drawn) on the macOS icon
 /// grid: an 824 px rounded square centred in 1024, the rest transparent.
 pub fn icon() -> Option<Arc<egui::IconData>> {
     let img = mark_image()?;
@@ -63,7 +66,10 @@ pub fn icon() -> Option<Arc<egui::IconData>> {
     let shape = 824u32;
     let inset = (size - shape) / 2;
     let radius = shape as f32 * 0.225;
-    let art = image::imageops::resize(img, shape, shape, image::imageops::FilterType::CatmullRom);
+    // The mark at DOCK_MARK_SCALE of its own square, on the same black ground.
+    let art_px = (shape as f32 * DOCK_MARK_SCALE).round() as u32;
+    let art_at = (shape - art_px) / 2;
+    let art = image::imageops::resize(img, art_px, art_px, image::imageops::FilterType::CatmullRom);
     let mut out = image::RgbaImage::new(size, size);
     for y in 0..shape {
         for x in 0..shape {
@@ -76,7 +82,8 @@ pub fn icon() -> Option<Arc<egui::IconData>> {
             if a <= 0.0 {
                 continue;
             }
-            let p = art.get_pixel(x, y);
+            let inside = (art_at..art_at + art_px).contains(&x) && (art_at..art_at + art_px).contains(&y);
+            let p = if inside { *art.get_pixel(x - art_at, y - art_at) } else { image::Rgba([0, 0, 0, 255]) };
             out.put_pixel(inset + x, inset + y, image::Rgba([p[0], p[1], p[2], (a * 255.0).round() as u8]));
         }
     }
@@ -107,7 +114,7 @@ mod tests {
         for (name, rgb) in [("menubar-icon-light.png", [0, 0, 0]), ("menubar-icon-dark.png", [255, 255, 255])] {
             let (png, w, h) = super::menubar_icon_png(rgb).expect("icon");
             assert_eq!(h, 28);
-            assert!(w > 16 && w < 50);
+            assert!(w > 8 && w < 50);
             std::fs::write(dir.join(name), png).unwrap();
         }
     }
