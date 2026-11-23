@@ -54,10 +54,11 @@ Requires macOS 11 or later.
 
 ## Updates
 
-Once a day Kernship asks GitHub for the number of the latest release. When a new version is
-out it downloads it, checks it against the published checksums and installs it when you quit
-Kernship; **Restart to update** in the sidebar installs it at once. You can turn the check off
-in **Settings › General › Updates**.
+Each time it opens, and once a day while it stays open, Kernship asks GitHub for the number of
+the latest release. When a new version is out it downloads it, checks it against the published
+checksums and asks whether to restart now; otherwise it installs the update when you quit
+Kernship (**Restart to update** in the sidebar also installs it at once). You can turn the check
+off in **Settings › General › Updates**.
 
 ## Privacy
 

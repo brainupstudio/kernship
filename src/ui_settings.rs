@@ -235,11 +235,11 @@ fn updates(app: &mut KernshipApp, ui: &mut Ui) {
     mac_check(ui, &mut app.st.prefs.update_check, "Check when Kernship opens");
     ui.horizontal(|ui| {
         ui.add_space(28.0);
-        note(ui, "Once a day it asks GitHub for the number of the latest version. Nothing about you or your fonts is sent.");
+        note(ui, "At every start, and once a day while it stays open, it asks GitHub for the number of the latest version. Nothing about you or your fonts is sent.");
     });
     ui.horizontal(|ui| {
         ui.add_space(28.0);
-        note(ui, "A new version downloads on its own and installs when you quit Kernship.");
+        note(ui, "A new version downloads on its own; Kernship then offers to restart, or installs it when you quit.");
     });
 }
 

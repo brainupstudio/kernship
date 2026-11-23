@@ -32,6 +32,8 @@ pub enum Dialog {
     /// Asks before removing a library, set, tag or smart filter from the sidebar.
     ConfirmRemove { what: RemoveWhat, name: String },
     Welcome,
+    /// A new version is downloaded and waits: restart now, or let it install on quit.
+    UpdateReady { version: String },
 }
 
 #[derive(Clone, Debug, PartialEq)]
@@ -559,17 +561,30 @@ impl KernshipApp {
         std::process::exit(0);
     }
 
-    /// At start (never for screenshots): the check once a day, or at every start with a
-    /// pretended version; then the download of what it found, and the script that installs it.
+    /// The check at every start and once a day while Kernship stays open (never for screenshots);
+    /// then the download of what it found, the script that installs it, and the question
+    /// whether to restart now.
     fn poll_update(&mut self, ctx: &egui::Context) {
         if self.frame == 3 && self.screenshot.is_none() {
-            let now = crate::model::now_secs() as i64;
-            let due = now - self.st.prefs.update_checked >= crate::update::CHECK_EVERY_SECS || crate::update::pretending();
-            if self.st.prefs.update_check && due {
-                // the answer decides what to download: the version remembered may be older
+            // at every start: the answer decides what to download
+            if self.st.prefs.update_check {
                 self.update.start(false);
             } else if let Some(v) = self.update_available() {
                 self.get_update(v);
+            }
+        }
+        // Kernship can stay open for days in the background: ask again once a day.
+        if self.frame > 3 && self.screenshot.is_none() && self.st.prefs.update_check && !self.update.checking() && self.update.download.is_none() {
+            let every = std::time::Duration::from_secs(crate::update::CHECK_EVERY_SECS as u64);
+            if self.update.last_try.is_some_and(|t| t.elapsed() >= every) {
+                self.update.start(false);
+            }
+        }
+        // A version just got ready: ask once whether to restart now (never over another dialog).
+        if let Some(v) = self.update.ready.clone() {
+            if self.update.prompted.as_deref() != Some(v.as_str()) && matches!(self.dialog, Dialog::None) && self.update_available().as_deref() == Some(v.as_str()) {
+                self.update.prompted = Some(v.clone());
+                self.dialog = Dialog::UpdateReady { version: v };
             }
         }
         if let Some((v, rx)) = &self.update.download {

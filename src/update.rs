@@ -23,11 +23,6 @@ pub fn current() -> String {
     std::env::var(PRETEND).ok().filter(|v| parse(v).is_some()).unwrap_or_else(|| CURRENT.to_string())
 }
 
-/// Set when the version is pretended: the check then runs at every start.
-pub fn pretending() -> bool {
-    std::env::var(PRETEND).map(|v| parse(&v).is_some()).unwrap_or(false)
-}
-
 /// The Kernship.app this process runs from, when it runs from one (not a development build).
 pub fn installed_app() -> Option<PathBuf> {
     let exe = std::env::current_exe().ok()?.canonicalize().ok()?;
@@ -226,7 +221,7 @@ pub const REPO: &str = "brainupstudio/kernship";
 /// Where people download a new version, with the install command that avoids the warning.
 pub const DOWNLOAD_PAGE: &str = "https://github.com/brainupstudio/kernship/releases/latest";
 
-/// Once a day is enough: releases are rare.
+/// While Kernship stays open (it can run in the background for days), it asks again this often.
 pub const CHECK_EVERY_SECS: i64 = 24 * 60 * 60;
 
 /// The latest published version ("0.2.0", without the "v"), from the redirect of
@@ -297,6 +292,10 @@ pub struct Checker {
     /// The version prepared, with the script waiting for Kernship to end.
     pub ready: Option<String>,
     pub install_error: Option<String>,
+    /// When the last check started, so a long-running Kernship asks again once a day.
+    pub last_try: Option<std::time::Instant>,
+    /// The ready version whose "Restart now?" question was already asked in this run.
+    pub prompted: Option<String>,
 }
 
 impl Checker {
@@ -318,6 +317,7 @@ impl Checker {
             let _ = tx.send(latest());
         });
         self.rx = Some(rx);
+        self.last_try = Some(std::time::Instant::now());
         self.asked = asked;
         self.error = None;
     }

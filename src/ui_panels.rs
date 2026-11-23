@@ -460,6 +460,20 @@ pub fn dialogs(app: &mut KernshipApp, ctx: &egui::Context, now: f64) {
                 }
             });
         }),
+        Dialog::UpdateReady { version } => modal(ctx, "Update Ready", 380.0, |ui| {
+            ui.add(egui::Label::new(format!("Kernship {version} is downloaded. Restart now to install it, or keep working: it installs the next time you quit Kernship. Your fonts and libraries stay where they are.")).wrap());
+            ui.add_space(6.0);
+            ui.horizontal(|ui| {
+                ui.add_space((ui.available_width() - 190.0).max(0.0));
+                if button(ui, "Later", Btn::Plain) {
+                    close = true;
+                }
+                if button(ui, "Restart Now", Btn::Primary) {
+                    app.restart_to_update();
+                    close = true;
+                }
+            });
+        }),
         Dialog::ConfirmDelete { ids } => modal(ctx, "Delete from Library", 360.0, |ui| {
             ui.label(format!("Delete {} font(s)? They will be deactivated and their files removed from the library.", ids.len()));
             ui.horizontal(|ui| {
